@@ -1,716 +1,653 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bipul Maity — ECE Student, AI/ML Enthusiast & VLSI Aspirant. Building intelligent systems at the intersection of silicon and software." />
-  <meta name="keywords" content="Bipul Maity, ECE, AI ML, VLSI, Python, C++, portfolio, NVIDIA, semiconductor" />
-  <meta property="og:title" content="Bipul Maity | ECE · AI/ML · VLSI" />
-  <meta property="og:description" content="Portfolio of Bipul Maity — ECE student targeting top semiconductor and AI companies." />
-  <title>Bipul Maity — ECE · AI/ML · VLSI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bipul Maity — ECE Student · AI/ML Enthusiast · VLSI Aspirant</title>
+<meta name="description" content="Portfolio of Bipul Maity, an Electronics & Communication Engineering student building expertise across AI/ML, VLSI design, software development, and stock market analytics.">
+<meta name="keywords" content="Bipul Maity, ECE, VLSI, AI ML, Verilog, RTL Design, Python Developer, DSA, Stock Market Analysis">
+<meta property="og:title" content="Bipul Maity — ECE Student · AI/ML Enthusiast · VLSI Aspirant">
+<meta property="og:description" content="Building at the intersection of silicon and intelligence — AI/ML, VLSI Design, and Software Engineering.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- ═══════════════════  NAV  ═══════════════════ -->
-<nav class="nav" id="nav">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">
-      <span class="logo-bracket">[</span>bipul<span class="logo-dot">.</span>dev<span class="logo-bracket">]</span>
+<!-- ============ NOISE / GRID OVERLAY ============ -->
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ============ CURSOR TRACE (desktop only) ============ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ TOP PROGRESS BAR ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#hero" class="brand">
+      <span class="brand-mark">BM</span>
+      <span class="brand-pulse" aria-hidden="true"></span>
     </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#dsa">DSA</a></li>
-      <li><a href="#github">GitHub</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#dsa" data-nav>DSA</a>
+      <a href="#github" data-nav>GitHub</a>
+      <a href="#education" data-nav>Education</a>
+      <a href="#vision" data-nav>Vision</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
-</nav>
+</header>
 
-<!-- ═══════════════════  HERO  ═══════════════════ -->
-<section class="hero" id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow hero-glow-1"></div>
-  <div class="hero-glow hero-glow-2"></div>
-  <div class="hero-inner">
-    <div class="hero-eyebrow">
-      <span class="pulse-dot"></span>
-      <span class="mono">Available for Internships & Collaborations</span>
-    </div>
-    <h1 class="hero-name">
-      <span class="name-first">Bipul</span>
-      <span class="name-last">Maity</span>
-    </h1>
-    <div class="hero-tagline">
-      <span class="tagline-prefix mono">&gt; </span>
-      <span id="typingTarget" class="typing-text"></span>
-      <span class="typing-cursor">|</span>
-    </div>
-    <p class="hero-bio">
-      Building at the convergence of <em>silicon</em> and <em>intelligence</em> — from RTL design to neural networks, I engineer systems that matter. Aspiring to shape the future at companies like <strong>NVIDIA, AMD, Intel, Google</strong> and <strong>OpenAI</strong>.
-    </p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-primary">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        View Projects
-      </a>
-      <a href="#" class="btn btn-secondary" id="resumeBtn">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Resume
-      </a>
-      <a href="#contact" class="btn btn-ghost">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Contact Me
-      </a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item reveal">
-        <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
-        <span class="stat-label">DSA Problems</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item reveal">
-        <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
-        <span class="stat-label">Projects Built</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item reveal">
-        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
-        <span class="stat-label">Tech Domains</span>
-      </div>
-    </div>
-  </div>
-  <div class="hero-scroll-indicator">
-    <span class="mono">scroll</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
+<main id="top">
 
-<!-- ═══════════════════  ABOUT  ═══════════════════ -->
-<section class="section" id="about">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">01 // about</span>
-      <h2 class="section-title">The Engineer Behind the Code</h2>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="circuit-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <g class="circuit-traces" id="circuitTraces"></g>
+      </svg>
     </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p class="about-lead">
-          I'm a <strong>B.Tech ECE student</strong> who refused to pick just one discipline. I move between <em>Verilog and Python</em>, between <em>logic gates and neural networks</em>, finding the most interesting problems where hardware meets software.
+
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <p class="terminal-line mono">
+          <span class="prompt">&gt;</span>
+          <span id="terminalText"></span><span class="cursor-blink">_</span>
         </p>
-        <p>
-          My current obsession: how AI can reshape semiconductor design — from ML-assisted RTL verification to generative architectures. When I'm not designing circuits or training models, I'm grinding LeetCode in C++ and building stock market analytics tools that turn raw data into trading signals.
-        </p>
-        <p>
-          I target roles where precision matters at every abstraction layer — from CMOS gate sizing at <strong>NVIDIA or AMD</strong>, to AI infrastructure at <strong>Google DeepMind or OpenAI</strong>.
-        </p>
-        <div class="about-tags">
-          <span class="tag">AI/ML Research</span>
-          <span class="tag">VLSI Design</span>
-          <span class="tag">Semiconductor</span>
-          <span class="tag">Stock Analytics</span>
-          <span class="tag">Open Source</span>
-        </div>
-      </div>
-      <div class="about-card-grid reveal">
-        <div class="about-card glass">
-          <div class="about-card-icon">⚡</div>
-          <h3>VLSI & Digital Design</h3>
-          <p>Digital electronics, Verilog HDL, RTL design fundamentals for next-gen chip architectures.</p>
-        </div>
-        <div class="about-card glass">
-          <div class="about-card-icon">🧠</div>
-          <h3>AI / Machine Learning</h3>
-          <p>End-to-end ML workflows — from data wrangling with Pandas to model deployment via Streamlit.</p>
-        </div>
-        <div class="about-card glass">
-          <div class="about-card-icon">📈</div>
-          <h3>Quant & Market Analysis</h3>
-          <p>Building real-time technical analysis tools — RSI, MACD, candlestick charts, portfolio tracking.</p>
-        </div>
-        <div class="about-card glass">
-          <div class="about-card-icon">🏆</div>
-          <h3>Competitive DSA</h3>
-          <p>LeetCode-focused C++ problem solving across graphs, trees, DP, and system design fundamentals.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ═══════════════════  SKILLS  ═══════════════════ -->
-<section class="section section-alt" id="skills">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">02 // skills</span>
-      <h2 class="section-title">Technical Stack</h2>
-    </div>
-    <div class="skills-grid">
+        <h1 class="hero-name">
+          Bipul <span class="text-gradient">Maity</span>
+        </h1>
 
-      <div class="skill-category glass reveal">
-        <div class="skill-category-header">
-          <span class="skill-category-icon">💻</span>
-          <h3>Programming Languages</h3>
+        <p class="hero-tagline mono">
+          <span class="tag-chip">ECE Student</span>
+          <span class="tag-sep">·</span>
+          <span class="tag-chip">AI/ML Enthusiast</span>
+          <span class="tag-sep">·</span>
+          <span class="tag-chip">VLSI Aspirant</span>
+        </p>
+
+        <p class="hero-intro">
+          I'm an Electronics &amp; Communication Engineering student wiring together two
+          worlds — silicon and intelligence. By day I push transistors and RTL through
+          Verilog; by night I push data through models and markets. I build, I debug,
+          I ship — from logic gates to learning algorithms.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="resume.pdf" download="Bipul_Maity_Resume.pdf" class="btn btn-secondary" title="Add your resume.pdf to the project folder to activate this download">
+            <span>Download Resume</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <span>Contact Me</span>
+          </a>
         </div>
-        <div class="skill-pills">
-          <span class="pill pill-cyan">C</span>
-          <span class="pill pill-cyan">C++</span>
-          <span class="pill pill-cyan">Python</span>
-        </div>
-        <div class="skill-bars">
-          <div class="skill-bar-item">
-            <span class="skill-name mono">C++</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85"></div></div>
-            <span class="skill-pct mono">85%</span>
-          </div>
-          <div class="skill-bar-item">
-            <span class="skill-name mono">Python</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
-            <span class="skill-pct mono">80%</span>
-          </div>
-          <div class="skill-bar-item">
-            <span class="skill-name mono">C</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="75"></div></div>
-            <span class="skill-pct mono">75%</span>
+
+        <div class="hero-meta mono">
+          <div class="meta-item">
+            <span class="meta-dot dot-green"></span> Available for opportunities
           </div>
         </div>
       </div>
 
-      <div class="skill-category glass reveal">
-        <div class="skill-category-header">
-          <span class="skill-category-icon">🔢</span>
-          <h3>DSA Concepts</h3>
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="scope-panel glass">
+          <div class="scope-header mono">
+            <span>signal_monitor.vlsi</span>
+            <span class="scope-status">LIVE</span>
+          </div>
+          <svg class="scope-wave" viewBox="0 0 400 160" preserveAspectRatio="none">
+            <line x1="0" y1="40" x2="400" y2="40" class="grid-line"/>
+            <line x1="0" y1="80" x2="400" y2="80" class="grid-line"/>
+            <line x1="0" y1="120" x2="400" y2="120" class="grid-line"/>
+            <polyline id="waveLine" class="wave-line" points=""/>
+            <polyline id="waveLine2" class="wave-line wave-line-alt" points=""/>
+          </svg>
+          <div class="scope-footer mono">
+            <span>CLK 100MHz</span>
+            <span>MODEL: training</span>
+            <span>BTC <span class="up">▲</span></span>
+          </div>
         </div>
-        <div class="skill-pills">
-          <span class="pill pill-violet">Arrays</span>
-          <span class="pill pill-violet">Hashing</span>
-          <span class="pill pill-violet">Binary Search</span>
-          <span class="pill pill-violet">Sliding Window</span>
-          <span class="pill pill-violet">Linked Lists</span>
-          <span class="pill pill-violet">Trees</span>
-          <span class="pill pill-violet">Graphs</span>
+
+        <div class="float-chip chip-1 mono glass">&lt;/&gt; C++</div>
+        <div class="float-chip chip-2 mono glass">import torch</div>
+        <div class="float-chip chip-3 mono glass">module top();</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span class="mono">SCROLL</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-tag mono">0x01 — ABOUT</p>
+      <h2 class="section-title reveal">Two disciplines, <span class="text-gradient">one engineer</span></h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm passionate about <strong>AI/ML</strong>, <strong>VLSI</strong>,
+            <strong>software development</strong>, and <strong>stock market analytics</strong> —
+            four fields that rarely share a desk, but I keep them on mine. Electronics
+            taught me how information moves through silicon; machine learning is teaching
+            me how it moves through data.
+          </p>
+          <p>
+            My focus right now is building deep technical expertise at the intersection of
+            <strong> Artificial Intelligence</strong> and <strong>Semiconductor Design</strong> —
+            understanding not just how to train a model, but how the hardware underneath it
+            actually computes. I want to be the engineer who can speak fluently in both
+            <span class="mono inline-tag">tensor</span> and <span class="mono inline-tag">transistor</span>.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card glass">
+              <span class="stat-num mono">3+</span>
+              <span class="stat-label">Languages — C, C++, Python</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num mono">7+</span>
+              <span class="stat-label">DSA Topics Practiced</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num mono">2</span>
+              <span class="stat-label">Flagship Projects Shipped</span>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num mono">∞</span>
+              <span class="stat-label">Curiosity, Uncapped</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card-wrap reveal">
+          <div class="about-photo-card glass">
+            <div class="photo-frame">
+              <div class="photo-placeholder mono">
+                <span>BM</span>
+              </div>
+              <div class="frame-corner tl"></div>
+              <div class="frame-corner tr"></div>
+              <div class="frame-corner bl"></div>
+              <div class="frame-corner br"></div>
+            </div>
+            <p class="mono photo-caption">status: <span class="up">compiling_future()</span></p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="skill-category glass reveal">
-        <div class="skill-category-header">
-          <span class="skill-category-icon">🤖</span>
+  <!-- ============ SKILLS ============ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="section-tag mono">0x02 — SKILLS</p>
+      <h2 class="section-title reveal">My technical stack</h2>
+      <p class="section-sub reveal">Tools and concepts I reach for, organized the way I think about them.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card glass reveal">
+          <div class="skill-head">
+            <span class="skill-icon">{ }</span>
+            <h3>Programming</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">C</span>
+            <span class="chip">C++</span>
+            <span class="chip">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-head">
+            <span class="skill-icon">◆</span>
+            <h3>DSA</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Arrays</span>
+            <span class="chip">Hashing</span>
+            <span class="chip">Binary Search</span>
+            <span class="chip">Sliding Window</span>
+            <span class="chip">Linked Lists</span>
+            <span class="chip">Trees</span>
+            <span class="chip">Graphs</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-head">
+            <span class="skill-icon">✦</span>
+            <h3>AI / ML</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">NumPy</span>
+            <span class="chip">Pandas</span>
+            <span class="chip">Scikit-Learn</span>
+            <span class="chip">Machine Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-head">
+            <span class="skill-icon">⚙</span>
+            <h3>Tools</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Git</span>
+            <span class="chip">GitHub</span>
+            <span class="chip">VS Code</span>
+            <span class="chip">Streamlit</span>
+            <span class="chip">Plotly</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal skill-card-wide">
+          <div class="skill-head">
+            <span class="skill-icon">⌁</span>
+            <h3>VLSI</h3>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Digital Electronics</span>
+            <span class="chip">Verilog HDL</span>
+            <span class="chip chip-learning">RTL Design <em>· learning</em></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-tag mono">0x03 — PROJECTS</p>
+      <h2 class="section-title reveal">Featured projects</h2>
+      <p class="section-sub reveal">Things I've built to learn, and learned by building.</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card glass reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-index mono">PRJ.01</span>
+            <span class="project-status mono">market data → signal</span>
+          </div>
+          <h3 class="project-title">Stock Market Analysis Tool</h3>
+          <p class="project-desc">
+            An interactive analytics dashboard that turns raw market data into readable
+            signal — built with Python, Streamlit, and Plotly for real-time visual feedback.
+          </p>
+          <ul class="project-features">
+            <li>Real-time stock analysis</li>
+            <li>Candlestick charts</li>
+            <li>RSI indicator</li>
+            <li>MACD indicator</li>
+            <li>Automated trading signals</li>
+            <li>Portfolio tracker</li>
+            <li>Multiple stock comparison</li>
+          </ul>
+          <div class="project-stack mono">
+            <span class="chip chip-sm">Python</span>
+            <span class="chip chip-sm">Streamlit</span>
+            <span class="chip chip-sm">Plotly</span>
+            <span class="chip chip-sm">Pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow mono">View Repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+        <article class="project-card glass reveal">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <span class="project-index mono">PRJ.02</span>
+            <span class="project-status mono">data → model → insight</span>
+          </div>
+          <h3 class="project-title">AI / ML Projects</h3>
+          <p class="project-desc">
+            A growing collection of applied machine learning work — exploratory data
+            analysis, predictive models, and end-to-end ML workflows built to understand
+            how data becomes a decision.
+          </p>
+          <ul class="project-features">
+            <li>Exploratory data analysis</li>
+            <li>Prediction models</li>
+            <li>Machine learning workflows</li>
+          </ul>
+          <div class="project-stack mono">
+            <span class="chip chip-sm">Python</span>
+            <span class="chip chip-sm">NumPy</span>
+            <span class="chip chip-sm">Pandas</span>
+            <span class="chip chip-sm">Scikit-Learn</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="link-arrow mono">View Repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DSA JOURNEY ============ -->
+  <section class="section section-alt" id="dsa">
+    <div class="container">
+      <p class="section-tag mono">0x04 — DSA JOURNEY</p>
+      <h2 class="section-title reveal">Solving, one problem at a time</h2>
+      <p class="section-sub reveal">
+        Practicing Data Structures &amp; Algorithms in C++, with a focus on LeetCode —
+        building the muscle memory that top tech interviews demand.
+      </p>
+
+      <div class="dsa-layout">
+        <div class="dsa-timeline reveal">
+          <div class="timeline-track">
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-body glass">
+                <span class="mono timeline-tag">stage_00</span>
+                <h4>Foundations</h4>
+                <p>Arrays, strings, and time-complexity intuition — learning to read a problem before writing a line of code.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-body glass">
+                <span class="mono timeline-tag">stage_01</span>
+                <h4>Searching &amp; Hashing</h4>
+                <p>Binary search patterns and hash-based lookups — trading brute force for O(log n) and O(1).</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-body glass">
+                <span class="mono timeline-tag">stage_02</span>
+                <h4>Sliding Window &amp; Linked Lists</h4>
+                <p>Two-pointer techniques and pointer manipulation — the gateway to harder structural problems.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <div class="timeline-body glass">
+                <span class="mono timeline-tag">stage_03</span>
+                <h4>Trees</h4>
+                <p>Traversals, recursion, and hierarchical thinking — where most interview problems start to live.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-dot dot-active"></span>
+              <div class="timeline-body glass">
+                <span class="mono timeline-tag">stage_04 · current</span>
+                <h4>Graphs</h4>
+                <p>BFS, DFS, and the patterns underneath pathfinding — actively practicing on LeetCode.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dsa-side reveal">
+          <div class="dsa-card glass">
+            <h4 class="mono">// why C++</h4>
+            <p>Close to the metal, fast to execute, and the language most DSA interviews are graded in — it keeps me honest about memory and complexity.</p>
+          </div>
+          <div class="dsa-card glass">
+            <h4 class="mono">// focus platform</h4>
+            <p>LeetCode-focused practice, pattern by pattern, building toward consistency over streaks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GITHUB ============ -->
+  <section class="section" id="github">
+    <div class="container">
+      <p class="section-tag mono">0x05 — GITHUB</p>
+      <h2 class="section-title reveal">Open-source footprint</h2>
+      <p class="section-sub reveal">Where the code actually lives.</p>
+
+      <div class="github-panel glass reveal">
+        <div class="github-top">
+          <div class="github-id">
+            <div class="gh-avatar mono">BM</div>
+            <div>
+              <h3 class="mono">@bipulmaity</h3>
+              <p class="gh-sub">ECE Student · Building in public</p>
+            </div>
+          </div>
+          <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+            <span>Visit Profile</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+
+        <div class="repo-grid">
+          <div class="repo-card">
+            <div class="repo-card-head">
+              <span class="repo-icon">📊</span>
+              <h4>stock-market-analysis-tool</h4>
+            </div>
+            <p>Real-time market dashboard with technical indicators and trading signals.</p>
+            <div class="repo-meta mono">
+              <span>● Python</span>
+              <span>Streamlit · Plotly</span>
+            </div>
+          </div>
+          <div class="repo-card">
+            <div class="repo-card-head">
+              <span class="repo-icon">🤖</span>
+              <h4>ai-ml-projects</h4>
+            </div>
+            <p>Applied ML experiments — EDA, prediction models, and full training workflows.</p>
+            <div class="repo-meta mono">
+              <span>● Python</span>
+              <span>Scikit-Learn</span>
+            </div>
+          </div>
+          <div class="repo-card">
+            <div class="repo-card-head">
+              <span class="repo-icon">🧩</span>
+              <h4>dsa-cpp</h4>
+            </div>
+            <p>LeetCode solutions and pattern notes — arrays through graphs, in C++.</p>
+            <div class="repo-meta mono">
+              <span>● C++</span>
+              <span>DSA</span>
+            </div>
+          </div>
+          <div class="repo-card">
+            <div class="repo-card-head">
+              <span class="repo-icon">⚡</span>
+              <h4>verilog-rtl-lab</h4>
+            </div>
+            <p>Digital logic and RTL design exercises — the start of my VLSI journey.</p>
+            <div class="repo-meta mono">
+              <span>● Verilog</span>
+              <span>RTL · learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contrib-wrap">
+          <p class="mono contrib-label">contribution_graph.svg</p>
+          <div class="contrib-graph" id="contribGraph" aria-label="GitHub contribution graph placeholder"></div>
+          <div class="contrib-legend mono">
+            <span>Less</span>
+            <span class="legend-box l0"></span>
+            <span class="legend-box l1"></span>
+            <span class="legend-box l2"></span>
+            <span class="legend-box l3"></span>
+            <span class="legend-box l4"></span>
+            <span>More</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <p class="section-tag mono">0x06 — EDUCATION</p>
+      <h2 class="section-title reveal">Academic foundation</h2>
+
+      <div class="edu-card glass reveal">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-body">
+          <h3>B.Tech in Electronics &amp; Communication Engineering</h3>
+          <p class="edu-org">Dr. Sudhir Chandra Sur Institute of Technology &amp; Sports Complex</p>
+          <p class="edu-univ mono">Affiliated to MAKAUT</p>
+        </div>
+        <div class="edu-badge mono">IN PROGRESS</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAREER VISION ============ -->
+  <section class="section" id="vision">
+    <div class="container">
+      <p class="section-tag mono">0x07 — CAREER VISION</p>
+      <h2 class="section-title reveal">Where I'm headed</h2>
+      <p class="section-sub reveal">
+        Building toward roles where silicon meets intelligence — the kind of work
+        happening at NVIDIA, AMD, Intel, Qualcomm, Google, Microsoft, and OpenAI.
+      </p>
+
+      <div class="vision-grid">
+        <div class="vision-card glass reveal">
+          <span class="vision-icon">✦</span>
           <h3>AI / ML</h3>
+          <p>Designing and training models that turn raw data into reliable decisions.</p>
         </div>
-        <div class="skill-pills">
-          <span class="pill pill-emerald">NumPy</span>
-          <span class="pill pill-emerald">Pandas</span>
-          <span class="pill pill-emerald">Scikit-Learn</span>
-          <span class="pill pill-emerald">Machine Learning</span>
+        <div class="vision-card glass reveal">
+          <span class="vision-icon">◈</span>
+          <h3>Generative AI</h3>
+          <p>Exploring the systems behind modern generative models — and how they're built to scale.</p>
         </div>
-        <div class="skill-bars">
-          <div class="skill-bar-item">
-            <span class="skill-name mono">NumPy / Pandas</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="80"></div></div>
-            <span class="skill-pct mono">80%</span>
-          </div>
-          <div class="skill-bar-item">
-            <span class="skill-name mono">Scikit-Learn</span>
-            <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="70"></div></div>
-            <span class="skill-pct mono">70%</span>
-          </div>
+        <div class="vision-card glass reveal">
+          <span class="vision-icon">⌁</span>
+          <h3>VLSI Design</h3>
+          <p>Going deeper into RTL and digital design — the hardware that makes intelligence physical.</p>
+        </div>
+        <div class="vision-card glass reveal">
+          <span class="vision-icon">▣</span>
+          <h3>Semiconductor Industry</h3>
+          <p>Aiming for a career building the chips that the next decade of computing runs on.</p>
         </div>
       </div>
-
-      <div class="skill-category glass reveal">
-        <div class="skill-category-header">
-          <span class="skill-category-icon">🛠️</span>
-          <h3>Tools & Frameworks</h3>
-        </div>
-        <div class="skill-pills">
-          <span class="pill pill-amber">Git</span>
-          <span class="pill pill-amber">GitHub</span>
-          <span class="pill pill-amber">VS Code</span>
-          <span class="pill pill-amber">Streamlit</span>
-          <span class="pill pill-amber">Plotly</span>
-        </div>
-      </div>
-
-      <div class="skill-category glass reveal skill-category-wide">
-        <div class="skill-category-header">
-          <span class="skill-category-icon">🔬</span>
-          <h3>VLSI / Hardware Design</h3>
-          <span class="badge-learning">Learning</span>
-        </div>
-        <div class="skill-pills">
-          <span class="pill pill-rose">Digital Electronics</span>
-          <span class="pill pill-rose">Verilog HDL</span>
-          <span class="pill pill-rose">RTL Design</span>
-        </div>
-        <div class="vlsi-note mono">
-          // Targeting: ASIC Design → Synthesis → Timing Closure → Tape-Out
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══════════════════  PROJECTS  ═══════════════════ -->
-<section class="section" id="projects">
+  <!-- ============ CONTACT ============ -->
+ <section class="section" id="contact">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">03 // projects</span>
-      <h2 class="section-title">Featured Work</h2>
-    </div>
-    <div class="projects-grid">
+    <p class="section-tag mono">0x08 — CONTACT</p>
+    <h2 class="section-title reveal">Let's build something</h2>
 
-      <!-- Project 1 -->
-      <div class="project-card glass reveal">
-        <div class="project-header">
-          <div class="project-icon-wrap">
-            <span class="project-icon">📊</span>
-          </div>
-          <div class="project-status">
-            <span class="status-dot status-live"></span>
-            <span class="mono status-text">Live</span>
-          </div>
-        </div>
-        <div class="project-accent-line accent-cyan"></div>
-        <h3 class="project-title">Stock Market Analysis Tool</h3>
-        <p class="project-desc">
-          A real-time technical analysis platform built with Python and Streamlit — bridging quantitative finance and software engineering. Processes live market data to surface actionable trading signals.
-        </p>
-        <ul class="project-features">
-          <li>Real-time stock data ingestion & analysis</li>
-          <li>Interactive candlestick charts via Plotly</li>
-          <li>RSI & MACD indicator computation</li>
-          <li>Automated buy/sell signal generation</li>
-          <li>Portfolio tracker with P&L dashboard</li>
-          <li>Multi-stock comparison view</li>
-        </ul>
-        <div class="project-tech">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Streamlit</span>
-          <span class="tech-tag">Plotly</span>
-          <span class="tech-tag">Pandas</span>
-          <span class="tech-tag">NumPy</span>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/bipulmaity" target="_blank" class="project-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            View on GitHub
-          </a>
-          <a href="#" class="project-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Live Demo
-          </a>
-        </div>
-      </div>
+    <p class="section-sub reveal">
+      ECE student focused on AI/ML, Generative AI, and VLSI Design. 
+      Open to internships, research opportunities, and technical collaborations.
+    </p>
 
-      <!-- Project 2 -->
-      <div class="project-card glass reveal">
-        <div class="project-header">
-          <div class="project-icon-wrap">
-            <span class="project-icon">🧠</span>
-          </div>
-          <div class="project-status">
-            <span class="status-dot status-building"></span>
-            <span class="mono status-text">Building</span>
-          </div>
-        </div>
-        <div class="project-accent-line accent-violet"></div>
-        <h3 class="project-title">AI/ML Projects Suite</h3>
-        <p class="project-desc">
-          A collection of end-to-end machine learning projects — covering supervised, unsupervised learning, and predictive analytics. Each project ships with a Streamlit interface for interactive exploration.
-        </p>
-        <ul class="project-features">
-          <li>Exploratory data analysis pipelines</li>
-          <li>Regression & classification prediction models</li>
-          <li>Feature engineering & selection workflows</li>
-          <li>Model evaluation and hyperparameter tuning</li>
-          <li>Interactive ML dashboards via Streamlit</li>
-        </ul>
-        <div class="project-tech">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Scikit-Learn</span>
-          <span class="tech-tag">Pandas</span>
-          <span class="tech-tag">NumPy</span>
-          <span class="tech-tag">Streamlit</span>
-        </div>
-        <div class="project-footer">
-          <a href="https://github.com/bipulmaity" target="_blank" class="project-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            View on GitHub
-          </a>
-        </div>
-      </div>
+    <div class="contact-grid reveal">
 
-      <!-- VLSI Project -->
-      <div class="project-card glass reveal project-card-wide">
-        <div class="project-header">
-          <div class="project-icon-wrap">
-            <span class="project-icon">🔬</span>
-          </div>
-          <div class="project-status">
-            <span class="status-dot status-learning"></span>
-            <span class="mono status-text">Learning</span>
-          </div>
-        </div>
-        <div class="project-accent-line accent-rose"></div>
-        <h3 class="project-title">VLSI / Digital Design Projects</h3>
-        <p class="project-desc">
-          RTL-level digital design implementations in Verilog HDL. Building foundational circuit modules — ALUs, FIFOs, FSMs — targeting ASIC and FPGA flows.
-        </p>
-        <div class="project-tech">
-          <span class="tech-tag">Verilog HDL</span>
-          <span class="tech-tag">Digital Logic</span>
-          <span class="tech-tag">RTL Design</span>
-          <span class="tech-tag">Simulation</span>
-        </div>
-        <div class="vlsi-roadmap">
-          <div class="roadmap-step done">Digital Fundamentals</div>
-          <div class="roadmap-arrow">→</div>
-          <div class="roadmap-step done">Verilog HDL</div>
-          <div class="roadmap-arrow">→</div>
-          <div class="roadmap-step active">RTL Design</div>
-          <div class="roadmap-arrow">→</div>
-          <div class="roadmap-step">Synthesis</div>
-          <div class="roadmap-arrow">→</div>
-          <div class="roadmap-step">Tape-Out</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════  DSA  ═══════════════════ -->
-<section class="section section-alt" id="dsa">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">04 // dsa journey</span>
-      <h2 class="section-title">Algorithmic Thinking</h2>
-    </div>
-    <div class="dsa-grid">
-      <div class="dsa-info reveal">
-        <p class="dsa-lead">Grinding LeetCode in <strong>C++</strong>, one pattern at a time. DSA is not just contest prep — it's how I think about efficiency at the hardware level too.</p>
-        <div class="dsa-platform glass">
-          <div class="platform-header">
-            <span class="platform-logo">🟡</span>
-            <span class="platform-name">LeetCode</span>
-            <a href="https://leetcode.com" target="_blank" class="platform-link mono">→ Profile</a>
-          </div>
-          <div class="platform-stats">
-            <div class="p-stat">
-              <span class="p-stat-val">100+</span>
-              <span class="p-stat-label">Problems Solved</span>
-            </div>
-            <div class="p-stat">
-              <span class="p-stat-val">C++</span>
-              <span class="p-stat-label">Primary Language</span>
-            </div>
-            <div class="p-stat">
-              <span class="p-stat-val">Active</span>
-              <span class="p-stat-label">Status</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dsa-timeline reveal">
-        <div class="timeline-item">
-          <div class="timeline-marker done-marker"></div>
-          <div class="timeline-content glass">
-            <h4>Arrays & Hashing</h4>
-            <p>Two-pointer, frequency maps, prefix sums, sliding window mastery.</p>
-            <span class="timeline-tag">✅ Mastered</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker done-marker"></div>
-          <div class="timeline-content glass">
-            <h4>Binary Search</h4>
-            <p>Search space reduction, rotated arrays, answer binary search patterns.</p>
-            <span class="timeline-tag">✅ Mastered</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker done-marker"></div>
-          <div class="timeline-content glass">
-            <h4>Linked Lists & Trees</h4>
-            <p>Traversal patterns, BST properties, DFS/BFS on trees.</p>
-            <span class="timeline-tag">✅ Mastered</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker active-marker"></div>
-          <div class="timeline-content glass active-timeline">
-            <h4>Graphs</h4>
-            <p>Dijkstra, BFS/DFS, topological sort, union-find, shortest paths.</p>
-            <span class="timeline-tag active-tag">🔥 In Progress</span>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker future-marker"></div>
-          <div class="timeline-content glass">
-            <h4>Dynamic Programming</h4>
-            <p>Memoization, tabulation, knapsack variants, interval DP.</p>
-            <span class="timeline-tag future-tag">⏳ Next</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════  GITHUB  ═══════════════════ -->
-<section class="section" id="github">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">05 // github</span>
-      <h2 class="section-title">Open Source Activity</h2>
-    </div>
-    <div class="github-layout">
-      <div class="github-profile glass reveal">
-        <div class="gh-avatar">
-          <div class="gh-avatar-inner">BM</div>
-        </div>
-        <div class="gh-info">
-          <h3>Bipul Maity</h3>
-          <span class="mono gh-handle">@bipulmaity</span>
-          <p>ECE student · AI/ML · VLSI · C++ · Python</p>
-        </div>
-        <div class="gh-stats">
-          <div class="gh-stat">
-            <span class="gh-stat-val">10+</span>
-            <span class="gh-stat-label">Repositories</span>
-          </div>
-          <div class="gh-stat">
-            <span class="gh-stat-val">Active</span>
-            <span class="gh-stat-label">Contributor</span>
-          </div>
-        </div>
-        <a href="https://github.com/bipulmaity" target="_blank" class="btn btn-primary gh-btn">
-          Visit GitHub Profile
-        </a>
-      </div>
-      <div class="github-repos reveal">
-        <div class="repo-card glass">
-          <div class="repo-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            <span class="repo-name">stock-market-analysis</span>
-          </div>
-          <p class="repo-desc">Real-time stock analysis tool with RSI, MACD & trading signals</p>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot lang-python"></span>Python</span>
-            <span class="repo-stars">⭐ —</span>
-          </div>
-        </div>
-        <div class="repo-card glass">
-          <div class="repo-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            <span class="repo-name">ml-projects</span>
-          </div>
-          <p class="repo-desc">Collection of ML workflows — data analysis, prediction models</p>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot lang-python"></span>Python</span>
-            <span class="repo-stars">⭐ —</span>
-          </div>
-        </div>
-        <div class="repo-card glass">
-          <div class="repo-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            <span class="repo-name">dsa-cpp</span>
-          </div>
-          <p class="repo-desc">LeetCode solutions and DSA patterns in C++ with explanations</p>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot lang-cpp"></span>C++</span>
-            <span class="repo-stars">⭐ —</span>
-          </div>
-        </div>
-        <div class="repo-card glass">
-          <div class="repo-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            <span class="repo-name">verilog-designs</span>
-          </div>
-          <p class="repo-desc">RTL design implementations — ALU, FSM, FIFO modules in Verilog</p>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot lang-verilog"></span>Verilog</span>
-            <span class="repo-stars">⭐ —</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Contribution Graph Placeholder -->
-    <div class="contrib-section reveal">
-      <h3 class="contrib-title mono">// contribution activity</h3>
-      <div class="contrib-graph glass">
-        <div class="contrib-grid" id="contribGrid"></div>
-        <div class="contrib-legend">
-          <span class="mono">Less</span>
-          <span class="contrib-box cb-0"></span>
-          <span class="contrib-box cb-1"></span>
-          <span class="contrib-box cb-2"></span>
-          <span class="contrib-box cb-3"></span>
-          <span class="contrib-box cb-4"></span>
-          <span class="mono">More</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════  EDUCATION  ═══════════════════ -->
-<section class="section section-alt" id="education">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">06 // education</span>
-      <h2 class="section-title">Academic Foundation</h2>
-    </div>
-    <div class="edu-card glass reveal">
-      <div class="edu-degree-badge">B.Tech</div>
-      <div class="edu-details">
-        <h3 class="edu-degree">Electronics and Communication Engineering</h3>
-        <span class="edu-institute">Dr. Sudhir Chandra Sur Institute of Technology &amp; Sports Complex</span>
-        <span class="edu-affiliation mono">Affiliated: MAKAUT (Maulana Abul Kalam Azad University of Technology)</span>
-        <div class="edu-focus">
-          <span class="edu-focus-label">Core Areas:</span>
-          <span class="edu-focus-item">Digital Electronics</span>
-          <span class="edu-focus-item">Signal Processing</span>
-          <span class="edu-focus-item">VLSI Design</span>
-          <span class="edu-focus-item">Embedded Systems</span>
-          <span class="edu-focus-item">Communications</span>
-        </div>
-      </div>
-      <div class="edu-visual">
-        <div class="edu-icon-wrap">🎓</div>
-        <span class="edu-status mono">In Progress</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════  VISION  ═══════════════════ -->
-<section class="section vision-section" id="vision">
-  <div class="vision-bg-grid"></div>
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">07 // career vision</span>
-      <h2 class="section-title">Where I'm Headed</h2>
-    </div>
-    <p class="vision-intro reveal">Targeting roles at the frontier of compute — where semiconductor physics meets artificial intelligence.</p>
-    <div class="vision-targets reveal">
-      <div class="vision-card glass">
-        <div class="vision-icon">🤖</div>
-        <h3>AI / ML Engineering</h3>
-        <p>Building and optimizing machine learning systems — from training pipelines to production inference at scale.</p>
-        <div class="vision-companies">
-          <span class="company-chip">Google DeepMind</span>
-          <span class="company-chip">OpenAI</span>
-          <span class="company-chip">Microsoft</span>
-        </div>
-      </div>
-      <div class="vision-card glass">
-        <div class="vision-icon">✨</div>
-        <h3>Generative AI</h3>
-        <p>Research and application of large-scale generative models — LLMs, diffusion models, multimodal systems.</p>
-        <div class="vision-companies">
-          <span class="company-chip">OpenAI</span>
-          <span class="company-chip">Google</span>
-          <span class="company-chip">Microsoft</span>
-        </div>
-      </div>
-      <div class="vision-card glass">
-        <div class="vision-icon">⚡</div>
-        <h3>VLSI Design</h3>
-        <p>Custom silicon design for high-performance applications — GPU microarchitecture, AI accelerators, SoC design.</p>
-        <div class="vision-companies">
-          <span class="company-chip">NVIDIA</span>
-          <span class="company-chip">AMD</span>
-          <span class="company-chip">Intel</span>
-          <span class="company-chip">Qualcomm</span>
-        </div>
-      </div>
-      <div class="vision-card glass">
-        <div class="vision-icon">🔭</div>
-        <h3>Semiconductor R&D</h3>
-        <p>Advanced process node research, next-gen memory architectures, and AI-in-silicon integration.</p>
-        <div class="vision-companies">
-          <span class="company-chip">Intel</span>
-          <span class="company-chip">Qualcomm</span>
-          <span class="company-chip">AMD</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════  CONTACT  ═══════════════════ -->
-<section class="section" id="contact">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-eyebrow mono">08 // contact</span>
-      <h2 class="section-title">Let's Connect</h2>
-    </div>
-    <p class="contact-intro reveal">Open to internship opportunities, research collaborations, and conversations about AI, VLSI, and the future of computing.</p>
-    <div class="contact-grid">
-      <a href="https://github.com/bipulmaity" target="_blank" class="contact-card glass reveal">
-        <div class="contact-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </div>
-        <h3>GitHub</h3>
-        <span class="mono contact-handle">@bipulmaity</span>
-        <span class="contact-arrow">→</span>
+      <a href="mailto:bipulmaity2025@gmail.com" class="contact-card glass">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16v16H4z" opacity="0"/>
+            <path d="M4 6h16v12H4z"/>
+            <path d="M4 6l8 7 8-7"/>
+          </svg>
+        </span>
+        <span class="contact-label">Email</span>
+        <span class="contact-value mono">bipulmaity2025@gmail.com</span>
       </a>
-      <a href="https://linkedin.com/in/bipulmaity" target="_blank" class="contact-card glass reveal">
-        <div class="contact-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </div>
-        <h3>LinkedIn</h3>
-        <span class="mono contact-handle">Bipul Maity</span>
-        <span class="contact-arrow">→</span>
+
+
+      <a href="https://github.com/Bipul118" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.74 0 0 .84-.27 2.75 1.05a9.3 9.3 0 0 1 2.5-.35c.85 0 1.7.12 2.5.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.43.2 2.48.1 2.74.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49C19.14 20.62 22 16.77 22 12.25 22 6.58 17.52 2 12 2z"/>
+          </svg>
+        </span>
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value mono">@Bipul118</span>
       </a>
-      <a href="https://leetcode.com/bipulmaity" target="_blank" class="contact-card glass reveal">
-        <div class="contact-card-icon lc-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
-        </div>
-        <h3>LeetCode</h3>
-        <span class="mono contact-handle">@bipulmaity</span>
-        <span class="contact-arrow">→</span>
+
+
+      <a href="https://www.linkedin.com/in/bipul18" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+          </svg>
+        </span>
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value mono">/in/bipul18</span>
       </a>
-      <a href="mailto:bipul.maity@example.com" class="contact-card glass reveal">
-        <div class="contact-card-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        </div>
-        <h3>Email</h3>
-        <span class="mono contact-handle">Drop a message</span>
-        <span class="contact-arrow">→</span>
+
+
+      <a href="https://leetcode.com/Bipul118" target="_blank" rel="noopener" class="contact-card glass">
+        <span class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M13 3l-7 9h6l-1 9 7-9h-6l1-9z"/>
+          </svg>
+        </span>
+        <span class="contact-label">LeetCode</span>
+        <span class="contact-value mono">/u/Bipul118</span>
       </a>
+
+
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════  FOOTER  ═══════════════════ -->
+<!-- ============ FOOTER ============ -->
 <footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">
-      <span class="logo-bracket">[</span>bipul<span class="logo-dot">.</span>dev<span class="logo-bracket">]</span>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark">BM</span>
+      <p class="mono footer-tag">silicon &amp; intelligence</p>
     </div>
-    <p class="footer-tagline mono">// Built with passion · Powered by curiosity</p>
-    <p class="footer-copy">&copy; 2024 Bipul Maity. Crafted for the future of AI &amp; Silicon.</p>
+    <p class="footer-text">© <span id="year"></span> Bipul Maity. Built from scratch — every pixel, every signal.</p>
+    <div class="footer-links mono">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
